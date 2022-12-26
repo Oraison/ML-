@@ -105,7 +105,7 @@ ML의 정의, 사용처
     + x's : input variables / features
     + y's : output variables / 'target' variables
       + (x, y) : single training example
-      + ($x^{(i)}$, $y^{(i)}$) : i번째 training set
+      + $(x^{(i)}, y^{(i)})$ : i번째 training set
 * training set으로 무엇을 하는가
   - Training set을 선택
   - Learning algorithm을 실행
