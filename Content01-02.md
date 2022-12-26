@@ -179,8 +179,9 @@ $\displaystyle \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1)$
   - $\displaystyle h_\theta(x)\, =\, \theta_0 + \theta_1\times x$ 이다.
 * 이를 적용하면 식이   
 $
+\displaystyle
 \begin{aligned}
-\displaystyle &\frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1) \\
+ & \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1) \\
 =& \frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)}) - y^{(i)})^2 \\
 =& \frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum_{i=1}^m(\theta_0 + \theta_1x^{(i)} - y^{(i)})^2
 \end{aligned} 
@@ -189,8 +190,8 @@ $
 * 이를 $j=0,\, j=1$ 에 대하여 미분하면  
 $
 \displaystyle
-j=0:\,\frac{\partial}{\partial\theta_0}J(\theta_0,\,\theta_1)\, =\, \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})\\
-j=1:\,\frac{\partial}{\partial\theta_1}J(\theta_0,\,\theta_1)\, =\, \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)}) \cdot x^{(i)}
+j=0 : \,\frac{\partial}{\partial\theta_0}J(\theta_0,\,\theta_1)\, =\, \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})\\
+j=1 : \,\frac{\partial}{\partial\theta_1}J(\theta_0,\,\theta_1)\, =\, \frac{1}{m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)}) \cdot x^{(i)}
 $   
   위와같은 형태가 된다
 
