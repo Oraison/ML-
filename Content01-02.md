@@ -181,7 +181,7 @@ $\displaystyle \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1)$
 $
 \displaystyle
 \begin{aligned}
- & \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1) \\
+& \frac{\partial}{\partial\theta_j}J(\theta_0,\theta_1) \\
 =& \frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)}) - y^{(i)})^2 \\
 =& \frac{\partial}{\partial\theta_j}\frac{1}{2m}\sum_{i=1}^m(\theta_0 + \theta_1x^{(i)} - y^{(i)})^2
 \end{aligned} 
