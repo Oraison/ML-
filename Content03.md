@@ -263,12 +263,12 @@ $
 ---
 
 ## Implementation / use
-* Hpuse price에서 3가지 가설을 설정할 수 있다.
-* 모든 data에 대해서 3가지 가설을 확인하기 위해 Matrix-Matrix 곱셈이 효과적이다
+* Hpuse price에서 3가지 변수를 설정할 수 있다.
+* 모든 data에 대해서 3가지 변수를 확인하기 위해 Matrix-Matrix 곱셈이 효과적이다
     - Data patrix, Parameter matrix를 만들면 된다.
     - 예시
         + 4개의 집에 대해서 가격을 예측하고싶다
-        + 3개의 가설을 설정한다
+        + 3개의 변수를 설정한다
         $
         \\
         House\; Size:
