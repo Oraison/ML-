@@ -11,8 +11,8 @@
 
 ### An alternative view of logistic regression
 * Logistic regression을 변형하여 SVM을 생성할 것이다
-    - 이전의 logistic regression은 아래와 같은 형태이다
-    $\\\displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}$
+    - 이전의 logistic regression은 아래와 같은 형태이다</br>
+    $\displaystyle h_\theta(x)=\frac{1}{1+e^{-\theta^Tx}}$
     - Sigmoid activation function은 아래와 같다</br>
     ![Alt text](figs/fig12-1.png)
     - z는 그림 아래와 같이 $(\theta^Tx)$ 로 정의했다
@@ -24,15 +24,11 @@
         + $h_\theta(x)$ 가 0에 근접하게 만들고 싶다
         + $h_\theta(x)$ 가 0에 근접할 때 $(\theta^Tx)$ 가 0보다 매우 작아야한다
 * Logistic regression
-    - Cost function은 아래와 같다
-    $\\\displaystyle 
-    -(y \log h_\theta(x) + (1-y) \log(1-h_\theta(x)))
-    $
+    - Cost function은 아래와 같다</br>
+    $\displaystyle -(y \log h_\theta(x) + (1-y) \log(1-h_\theta(x)))$
         + 모든 x에 대한 cost function은 각각의 training set의 x와 y를 통해 얻은 결과의 총합을 m으로 나눈 형태이다
-* 위의 cost function의 $h_\theta(x)$ 를 대입한다면 아래와 같다
-$\\\displaystyle
--(y \log \frac{1}{1+e^{-\theta^Tx}} + (1-y) \log(1-\frac{1}{1+e^{-\theta^Tx}}))
-$
+* 위의 cost function의 $h_\theta(x)$ 를 대입한다면 아래와 같다</br>
+$\displaystyle -(y \log \frac{1}{1+e^{-\theta^Tx}} + (1-y) \log(1-\frac{1}{1+e^{-\theta^Tx}}))$
 
 * y=1일 때의 z에대한 cost function의 그래프이다</br>
 ![Alt text](figs/fig12-2.png)
