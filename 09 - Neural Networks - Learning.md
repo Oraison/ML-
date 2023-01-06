@@ -9,8 +9,8 @@
     - Training set : {$(x^1,y^1), (x^2,y^2), (x^3,y^3), \dots, (x^n,y^m)$}
     - L : network의 layers의 수
         + 아래의 예시에서는 L=4이다
-    - $s_l$ : l번 layer의 numint 의 개수(bias unit은 포함되지 않는다)
-    ![Alt text](figs\fig9-1.png)
+    - $s_l$ : l번 layer의 numint 의 개수(bias unit은 포함되지 않는다)</br>
+    ![Alt text](figs/fig9-1.png)
 * 위의 예시의 경우
     - l = 4
     - $s_1$ = 3
@@ -99,15 +99,15 @@ $
 
 ## Back propagation algorithm
 * 동작 원리</br>
-![Alt text](figs\fig9-2.png)
+![Alt text](figs/fig9-2.png)
     1. Layer k-1(output 직전 unit) </br>
-![Alt text](figs\fig9-3.png)
+![Alt text](figs/fig9-3.png)
         + error에 $w_{10}^{(1)}$ 이 미치는 영향 = error에 $a_{20}$ 이 미치는 영향 $\times$ $a_{20}$ 에 $z_{20}$ 이 미치는 영향 $\times$  $z_{20}$ 에 $w_{10}^{(1)}$ 이 미치는 영향
             + 해당 unit이 영향을 미치는 output이 하나만 존재한다
                 - $w_{10}^{(0)} := w_{10}^{(0)} - \alpha \frac{\partial E_{tot}}{\partial w_{10}^{(0)}}$
                     * 해당 연산은 모든 $E_{tot}$ 을 연산한 이후에 동시에 업데이트 한다
     2. 그 외 </br>
-![Alt text](figs\fig9-4.png)
+![Alt text](figs/fig9-4.png)
         + error에 $w_{10}^{(0)}$ 이 미치는 영향 = ($y_1$의 error에 $a_{10}$ 이 미치는 영향 + $y_2$의 error에 $a_{10}$ 이 미치는 영향) $\times$ $a_{10}$ 에 $z_10$ 이 미치는 영향 $\times$ $z_{10}$ 에 $w_{10}^{(0)}$ 이 미치는 영향
             + 해당 unit이 영향을 미치는 output이 2개 존재한다
                 - $E_{tot} = E_1 + E_2$
@@ -127,7 +127,7 @@ $
     - $z^{(4)} = \Theta^{(3)}a^{(3)}$
 * Layer 4
     - $a^{(4)} = h_\Theta(x) = g(z^{(4)})$ </br>
-![Alt text](figs\fig9-5.png)
+![Alt text](figs/fig9-5.png)
 
 #### Sigmoid function derivative
 $
