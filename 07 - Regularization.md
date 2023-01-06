@@ -23,15 +23,15 @@
             - high variance : 입력된 data에 따라 출력이 변화하는 정도
     - 알고리즘은 high variance하다
         + 고차 함수로 데이터를 fitting할 때, 그 함수가 모든 데이터를 만족하게된다 - High variance
-        + 함수가 너무 고차원이다
-![Alt text](figs\fig7-1.png)
+        + 함수가 너무 고차원이다</br>
+![Alt text](figs/fig7-1.png)
 * 요약하자면 너무 많은 features를 사용하려고 하면 cost function이 0이 될 수 있다
 
 ### Overfitting with logistic regression
 * logistic regression에서도 같은 문제가 발생할 수 있다
     - sigmid function은 underfit이다
-    - 너무 고차함수를 사용하면 overfitting이 발생한다
-    ![Alt text](figs\fig7-2.png)
+    - 너무 고차함수를 사용하면 overfitting이 발생한다</br>
+    ![Alt text](figs/fig7-2.png)
 
 ### Addressing overfitting
 * 언제 overfitting과 underfitting이 일어나는지는 추후에 살펴볼 것이다
@@ -62,8 +62,8 @@
 * cost function 뒤의 $\theta_3$ 과 $\theta_4$ 에 penalty를 부여한 것이다
     - 위의 식을 풀고 나면 $\theta_3$ 과 $\theta_4$ 의 값은 0에 가깝게 되어있을 것이다
         + constrants가 매우 크기 때문이다
-    - 때문에 기존의 2차함수와 비슷한 형태로 나타날 것이다
-    ![Alt text](figs\fig7-3.png)
+    - 때문에 기존의 2차함수와 비슷한 형태로 나타날 것이다</br>
+    ![Alt text](figs/fig7-3.png)
 * 위의 예제에서는 2개의 parameter value에 penalty를 부여했다
     - 더 일반적으로 regrularization은 다음과 같다
 * Regularization
