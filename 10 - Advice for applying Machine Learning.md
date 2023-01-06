@@ -39,16 +39,16 @@
     2. Test error를 계산한다
         + $\displaystyle J_{test}(\theta) = \frac{1}{2m_{test}} \sum_{i=1}^{m_{test}} (h_\theta(x_{test}^{(i)}) - y_{test}^{(i)})^2$
 * Logistic regression의 경우
-    - 동일하게 70%는 learning에 사용되고 30%는 test에 사용된다
-    ![Alt text](figs\fig10-1.png)
+    - 동일하게 70%는 learning에 사용되고 30%는 test에 사용된다</br>
+    ![Alt text](figs/fig10-1.png)
 
 ---
 
 ## Model selection and training validation test sets
 * Polynomial의 차수나 regularization parameter를 어떻게 선택할 것인가(Model selection problems)
 * Model selection problem
-    - Data fitting에 필요한 polynomial의 차수를 선택한다
-    ![Alt text](figs\fig10-2.png)
+    - Data fitting에 필요한 polynomial의 차수를 선택한다</br>
+    ![Alt text](figs/fig10-2.png)
     - d = 선택하고자 하는 최고차항의 차수
         + d=1 : linear
         + d=2 : quardratic
@@ -91,7 +91,7 @@
     - High bias : under fitting problem
     - High variance : over fitting problem
 * Model의 차수가 증가할수록 overfitting해진다</br>
-![Alt text](figs\fig10-3.png)
+![Alt text](figs/fig10-3.png)
 * Training error와 Cross validation error 둘 모두 작은 d를 선택한다
     - Cv error가 크다면 d의 값을 더 크거나 더 작게 바꾼다
     - cv error의 변곡점의 d값이 2라면 d=2 model이 더 적합하다
@@ -109,8 +109,8 @@
 
 ## Regularization and bias/variance
 
-* Regularization이 bias와 variance에 미치는 영향
-![Alt text](figs\fig10-4.png)
+* Regularization이 bias와 variance에 미치는 영향</br>
+![Alt text](figs/fig10-4.png)
 * 위의 식은 Regularization을 사용하여 고차식을 fitting하는 방정식이다
     - Parameter의 크기를 줄이는데 사용
     - $\lambda$ 와 관련해서 다음과 같은 3가지 경우가 있을 수 있다
@@ -177,8 +177,8 @@
         + Cross validation set의 error
         + Training set의 크기가 아주 작다면 generalize가 잘 되지 않는다
         + Training set의 크기가 증가하면 hypothesis가 더 잘 generalize된다
-        + m이 증가하면 cv error는 감소한다
-        ![Alt text](figs\fig10-5.png)
+        + m이 증가하면 cv error는 감소한다</br>
+        ![Alt text](figs/fig10-5.png)
 * 위의 그래프를 해석한다면
     - High bias(직선)
         + $J_{train}$
