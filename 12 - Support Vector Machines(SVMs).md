@@ -13,7 +13,7 @@
 * Logistic regression을 변형하여 SVM을 생성할 것이다
     - 이전의 logistic regression은 아래와 같은 형태이다
     $\\\displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}$
-    - Sigmoid activation function은 아래와 같다
+    - Sigmoid activation function은 아래와 같다</br>
     ![Alt text](figs/fig12-1.png)
     - z는 그림 아래와 같이 $(\theta^Tx)$ 로 정의했다
 * Logistic regression이 왜 필요한가
@@ -48,7 +48,7 @@ $
 * SVM을 만들기 위해서는 cost function을 재정의 할 필요가 있다
     - y=1
         + 기존의 logistic regression의 cost function은 곡선으로 만들어졌다
-            + SVM의 cost function은 2개의 직선(분홍색)으로 이루어진다
+            + SVM의 cost function은 2개의 직선(분홍색)으로 이루어진다</br>
             ![Alt text](figs/fig12-5.png)
                 - z=1이 기준이다
                     * 1부터는 평평하다(기울기가 0이다)
@@ -58,7 +58,7 @@ $
                 - 이 함수는 optimization problem을 연산할 때 더 쉽게 계산할 수 있다는 이점이 있다
                 - 이를 $cost_1(z)$ 라고 한다
 * y=0
-    - 같은 방식으로 y=0일 때의 cost function을 표현한다
+    - 같은 방식으로 y=0일 때의 cost function을 표현한다</br>
     ![Alt text](figs/fig12-6.png)
         + 이를 $cost_0(z)$ 라고 한다
 * SVM의 cost function을 그래프로 그렸다
@@ -66,13 +66,13 @@ $
 
 ### The complete SVM cost function
 
-* Logistic regression은 아래와 같다
+* Logistic regression은 아래와 같다</br>
 ![Alt text](figs/fig12-4.png)
     - 위의 식에는 -log가 있어 좋지 않아보인다
 * SVM에서는 logistic regression의 y=1, y=0의 항을 다음과 같이 쓴다
     - $cost_1(\theta^Tx)$
     - $cost_0(\theta^Tx)$
-* 이를 적용하면 다음과 같은 식을 얻을 수 있다
+* 이를 적용하면 다음과 같은 식을 얻을 수 있다</br>
 ![Alt text](figs/fig12-7.png)
 
 ### SVM notation is slightly different
@@ -92,7 +92,7 @@ $
         + CA + B
         + $C = \frac{1}{\lambda}$ 라고 볼 수 있다
             + $CA + B$ 와 $A + \lambda B$ 는 같은 결과를 만든다
-* 위의 두가지를 변경하면 아래와 같은 식으로 표현할 수 있다
+* 위의 두가지를 변경하면 아래와 같은 식으로 표현할 수 있다</br>
 ![Alt text](figs/fig12-8.png)
 * Logistic과는 달리 $h_\theta(x)$ 가 확률을 예측하지는 않지만, 1과 0으로 직접 예측한다
     - $\theta^Tx \geq 0$ 이면 $h_\theta(x) = 1$
@@ -104,7 +104,7 @@ $
 
 * SVM을 large margin classifiers라고 부르기도 한다
     - large margin classifiers가 어떤 의미인지, SVM hypothesis가 어떻게 생겼는지를 생각해볼 필요가 있다
-    - 위에서 살펴본 SVM cost function은 아래와 같이 나타낼 수 있다
+    - 위에서 살펴본 SVM cost function은 아래와 같이 나타낼 수 있다</br>
     ![Alt text](figs/fig12-9.png)
     - 왼쪽은 $cost_1$ 이고, 오른쪽은 $cost_0$ 이다
     - 언제 cost가 0이 되는가
