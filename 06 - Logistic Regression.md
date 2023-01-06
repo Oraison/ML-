@@ -20,7 +20,7 @@
         + classifier output의 분류점을 정한다
             + 해당 값 이상이면 yes 아니면 no
         + 아래의 예시에서는 정상적으로 작동하는 것으로 보인다
-        ![Alt text](figs\fig6-1.png)
+        ![Alt text](figs/fig6-1.png)
 * 위의 그래프를 통해 두개의 계층을 하나로 만드는 것이 합리적이라는 것을 알 수 있다
     - 하지만 어떤 종양은 크기가 매우 작은데도 악성일 수 있다
     - 이 함수로는 모든 종양을 분류할 수 없다
@@ -91,7 +91,7 @@
 * 위의 식을 정리하면
     - if($x_1 + x_2 \geq 3$) then y=1이라고 예측할 수 있다
     - $x_1 + x_2 = 3$ 를 그래프에 경계선으로 나타내면 아래와 같다
-    ![Alt text](figs\fig6-2.png)
+    ![Alt text](figs/fig6-2.png)
 * 이를 통해 그래프에는 2개의 영역이 존재한다
     - 파란 동그라미 : false
     - 빨간 X : true
@@ -123,7 +123,7 @@
 * Cost Function을 사용하기 위한 optimization object를 정의하고 parameters를 찾는다
     - m개의 training example의 training set
         + 각각의 example은 n+1의 column vector이다
-![Alt text](figs\fig6-3.png)
+![Alt text](figs/fig6-3.png)
 * 아래와 같이 진행된다
     - m개의 training example set
     - 각각의 example은 n+1차원의 feature vector이다
@@ -273,6 +273,6 @@ $
         + $P(y=1 | x_2; \theta)$
     - $h_\theta^3(x)$ 는 1이면 가위표, 0이면 네모이거나 세모이다
         + $P(y=1 | x_3; \theta)$
-![Alt text](figs\fig6-4.png)
+![Alt text](figs/fig6-4.png)
 
 
