@@ -85,15 +85,15 @@
     - input wires를 통해 입력이 제공된다
     - logical unit이 계산한다
         + logistic 계산 과정은 이전의 logistic regression hypothesis연산과 같다
-    - output wires로 출력을 내려보낸다
-![Alt text](figs\fig8-1.png)
+    - output wires로 출력을 내려보낸다</br>
+![Alt text](figs/fig8-1.png)
 * 매우 간단한 neuron의 계산이다
     - 종종 $x_0$ input을 포함하는 것이 좋기도 하다 - bias unit
     - 이 artifical neurone은 sigmoid activation function이다
         - $\theta$ vector는 이 모델의 weights라고 부리기도 한다
     - 위의 diagram은 single neurones이다
-        - 아래에는 같이 반응하는 neurones의 그룹이 있다
-![Alt text](figs\fig8-2.png)
+        - 아래에는 같이 반응하는 neurones의 그룹이 있다</br>
+![Alt text](figs/fig8-2.png)
 * input은 $x_1, x_2, x_3$ 이다
     - 첫번째 layer를 input activation이라고 부른다($a_1^1, a_2^1, a_3^1$)
     - 두번째 layer에는 3개의 neurones이 있다($a_1^2, a_2^2, a_3^2$)
@@ -129,8 +129,8 @@
         + node의 input(s)
         + node와 연관된 parameter
             + 해당 layer와 연관된 $\Theta$ vector로 부터 얻어진다
-* notwork의 예시와 각각의 Node에 대한 계산
-![Alt text](figs\fig8-3.png)
+* notwork의 예시와 각각의 Node에 대한 계산</br>
+![Alt text](figs/fig8-3.png)
     - layer 2의 각각의 activation을 bias term과 input values를 기반으로 계산한다
         + $x_0$ 부터 $x_3$
     - input이 x가 아닌 이전 layer의 activation values라는 것을 제외한다면 동일하게 작동하여 final hypothesis(layer 3의 node)를 계산한다
@@ -164,8 +164,8 @@
 왜 NNs는 좋은지, 어떻게 complex non-linear 학습하도록 한는지
 
 * 이전에 본 문제가 아래에 있다
-    - 아래의 수식은 hypothesis를 출력하기 위한 연산 과정이다
-![Alt text](figs\fig8-3.png)
+    - 아래의 수식은 hypothesis를 출력하기 위한 연산 과정이다</br>
+![Alt text](figs/fig8-3.png)
 
 * 추가적인 항의 정의
     - $z_1^2$ = $\Theta_{10}^1 x_0 + \Theta_{11}^1 x_1 + \Theta_{12}^1 x_2 + \Theta_{13}^1 x_3$
@@ -180,7 +180,7 @@
     - 그러므로 다음과 같이 정의할 수 있다
         + x를 feature vector x로
         + $z^2$ 를 2번째 layer의 z values의 vector로</br>
-![Alt text](figs\fig8-4.png)
+![Alt text](figs/fig8-4.png)
 * $z^2$ 는 [$3 \times 1$] 차원의 vector이다
 * 다음의 2개의 과정을 통해 neural network의 computation을 벡터화 할 수 있다
     - $z^2$ = $\Theta^{(1)}x$
@@ -210,8 +210,8 @@
     - 이 구현의 벡터화 된 버전이다
 
 ### Neural networks learning its own features
-* 아래의 diagram은 logistic regressioon과 매우 유사하다
-![Alt text](figs\fig8-5.png)
+* 아래의 diagram은 logistic regressioon과 매우 유사하다</br>
+![Alt text](figs/fig8-5.png)
 * Layer 3은 logistic regression node이다
     - $h_\Theta()$ 의 출력은 $g(\Theta_{10}^{(2)} a_0^{(2)} + \Theta_{11}^{(2)} a_1^{(2)} + \Theta_{12}^{(2)} a_2^{(2)} + \Theta_{13}^{(2)} a_3^{(2)})$ 이다
     - 이것은 logistic regression이다
@@ -268,8 +268,8 @@
 ### Neural Network example 3: XNOR function 
 * 어떻게 XNOR Function이 동작하도록 만들 수 있는가
     - XNOR은 NOT XOR의 줄임말이다
-* AND, OR, Neither 이것들을 조합하여 neural network를 만들 수 있다
-![Alt text](figs\fig8-6.png)
+* AND, OR, Neither 이것들을 조합하여 neural network를 만들 수 있다</br>
+![Alt text](figs/fig8-6.png)
 
 * 1차식을 여러번 더해도 결국에는 1차식이다
     - Activation function이 없다면 결국에는 1차식만을 표현할 수 있다
