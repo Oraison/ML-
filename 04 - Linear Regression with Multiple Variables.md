@@ -122,7 +122,7 @@ $
         + x1 = 크기(0-2000 feet)
         + x2 = 방의 수(1-5)
         + 두 변수의 범위가 크게 차이나기 때문에 $\theta_1, \theta_2$ 를 표현하면 높고 얇은 형태가 나타난다
-        ![Alt text](figs\fig4-1.png)
+        ![Alt text](figs/fig4-1.png)
     - 이런 형태의 cost function을 gradient descent는 global minimum을 찾는데 시간이 오래걸릴 수 있다
 * Pathological input to gradient descent
     - 이러한 입력을 rescale해야 더욱 효과적이다
@@ -173,9 +173,9 @@ $
     - 동작 확인
         + $j(\theta)$ 에 대한 반복횟수의 그래프와 값의 증가량을 확인하면 더 작은 $\alpha$ 가 필요할 수 있다
             + minimizing a function이 아래와 같은 형태로 나타날 수 있다
-            ![Alt text](figs\fig4-2.png)
+            ![Alt text](figs/fig4-2.png)
             + Overshoot 때문에 minimum(초록 선)으로 수렴하도록 learning rate를 줄여야 한다
-            ![Alt text](figs\fig4-3.png)
+            ![Alt text](figs/fig4-3.png)
 * $J(\theta)$ 가 sin파 같은 형태일 수 있다는 다른 문제점이 있다
     - 이런 때에도 더 작은 $\alpha$ 가 필요할 것이다
 * $\alpha$ 가 충분히 작다면
@@ -254,7 +254,7 @@ $
 ### Example of normal equation
 
 * 아래의 표는 다음과 같다
-![Alt text](figs\fig4-4.png)
+![Alt text](figs/fig4-4.png)
     - m = 4
     - n = 4
 * normal equation을 구현하는 법
