@@ -14,7 +14,7 @@
     - 이전의 logistic regression은 아래와 같은 형태이다
     $\\\displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}$
     - Sigmoid activation function은 아래와 같다
-    ![Alt text](figs\fig12-1.png)
+    ![Alt text](figs/fig12-1.png)
     - z는 그림 아래와 같이 $(\theta^Tx)$ 로 정의했다
 * Logistic regression이 왜 필요한가
     - y=1일 때
@@ -35,11 +35,11 @@ $\\\displaystyle
 $
 
 * y=1일 때의 z에대한 cost function의 그래프이다</br>
-![Alt text](figs\fig12-2.png)
+![Alt text](figs/fig12-2.png)
     - z가 크면 cost는 작아진다
     - z가 0이거나 음수가 되면 cost가 매우 커진다
 * y=0일 때의 z에대한 cost function의 그래프이다</br>
-![Alt text](figs\fig12-3.png)
+![Alt text](figs/fig12-3.png)
     - z가 음수면 cost는 작아진다
     - z가 커지면 되면 cost가 매우 커진다
 
@@ -49,7 +49,7 @@ $
     - y=1
         + 기존의 logistic regression의 cost function은 곡선으로 만들어졌다
             + SVM의 cost function은 2개의 직선(분홍색)으로 이루어진다
-            ![Alt text](figs\fig12-5.png)
+            ![Alt text](figs/fig12-5.png)
                 - z=1이 기준이다
                     * 1부터는 평평하다(기울기가 0이다)
                     * 1보다 작아지면 값이 증가한다
@@ -59,7 +59,7 @@ $
                 - 이를 $cost_1(z)$ 라고 한다
 * y=0
     - 같은 방식으로 y=0일 때의 cost function을 표현한다
-    ![Alt text](figs\fig12-6.png)
+    ![Alt text](figs/fig12-6.png)
         + 이를 $cost_0(z)$ 라고 한다
 * SVM의 cost function을 그래프로 그렸다
     - 이를 어떻게 구현할 것인가
@@ -67,13 +67,13 @@ $
 ### The complete SVM cost function
 
 * Logistic regression은 아래와 같다
-![Alt text](figs\fig12-4.png)
+![Alt text](figs/fig12-4.png)
     - 위의 식에는 -log가 있어 좋지 않아보인다
 * SVM에서는 logistic regression의 y=1, y=0의 항을 다음과 같이 쓴다
     - $cost_1(\theta^Tx)$
     - $cost_0(\theta^Tx)$
 * 이를 적용하면 다음과 같은 식을 얻을 수 있다
-![Alt text](figs\fig12-7.png)
+![Alt text](figs/fig12-7.png)
 
 ### SVM notation is slightly different
 
@@ -93,7 +93,7 @@ $
         + $C = \frac{1}{\lambda}$ 라고 볼 수 있다
             + $CA + B$ 와 $A + \lambda B$ 는 같은 결과를 만든다
 * 위의 두가지를 변경하면 아래와 같은 식으로 표현할 수 있다
-![Alt text](figs\fig12-8.png)
+![Alt text](figs/fig12-8.png)
 * Logistic과는 달리 $h_\theta(x)$ 가 확률을 예측하지는 않지만, 1과 0으로 직접 예측한다
     - $\theta^Tx \geq 0$ 이면 $h_\theta(x) = 1$
     - 그렇지 않으면 $h_\theta(x) = 0$
@@ -105,7 +105,7 @@ $
 * SVM을 large margin classifiers라고 부르기도 한다
     - large margin classifiers가 어떤 의미인지, SVM hypothesis가 어떻게 생겼는지를 생각해볼 필요가 있다
     - 위에서 살펴본 SVM cost function은 아래와 같이 나타낼 수 있다
-    ![Alt text](figs\fig12-9.png)
+    ![Alt text](figs/fig12-9.png)
     - 왼쪽은 $cost_1$ 이고, 오른쪽은 $cost_0$ 이다
     - 언제 cost가 0이 되는가
         + y=1일 때
@@ -135,18 +135,18 @@ $
         + A=0이 보장된다면 B항만 minimizing하면 된다
             - A=0이면 A*C = 0이기 때문
         + B의 minimization은 아래와 같다</br>
-        ![Alt text](figs\fig12-10.png)
+        ![Alt text](figs/fig12-10.png)
     - 이를 계산하면 흥미로운 decision bondaries를 얻을 수 있다
-    ![SVM decision boundary with logistic regression's](figs\fig12-11.png)
+    ![SVM decision boundary with logistic regression's](figs/fig12-11.png)
     - 연두색이나 분홍색 선의 경우에는 logistic regression을 통해 얻을 수 있는 decision boundaries의 예시이다
         + 이는 generalize가 너무 안 된 예시들이다
     - SVM을 통해 얻어낸 검정색 선의 경우에는 더 안전한 decision boundary이다
     - 수학적으로 검은 선은 training examples에 가장 긴 거리(큰 margin)을 갖고있다
-    ![SVM decision boundary graph with margin](figs\fig12-12.png)
+    ![SVM decision boundary graph with margin](figs/fig12-12.png)
     - Margin을 가장 크게 만들었기 때문에 더 견고환 분류가 가능해진다
 * C가 매우 클 때에 대해 알아봤다
     - 큰 margin을 가진 경우 SVM은 이상치에 대해 매우 민감하게 반응한다
-    ![SVM decision boundary graph with outliers](figs\fig12-13.png)
+    ![SVM decision boundary graph with outliers](figs/fig12-13.png)
     - 이상치 하나가 classification boundary에 매우 큰 영향을 미칠 위험이 있다
         + 샘플 하나에 의해 알고리즘이 크게 바뀌는 것은 그리 좋지 못하다
         + C값이 매우 크다면 decision boundary가 검정색 선에서 분홍색 선으로 변경될 것이다
@@ -161,7 +161,7 @@ $
 
 ### SVM decision boundary
 
-![Alt text](figs\fig12-10.png)
+![Alt text](figs/fig12-10.png)
 * 두개의 단순화를 통한 예시
     - $\theta_0 = 0$
     - n=2
@@ -176,10 +176,10 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
     - $\theta^Tx = \theta \cdot x$ 를 의미하므로 다음과 같이 쓸 수 있다
     $\\\theta_1x_1^{(i)} + \theta_2x_2^{(i)} = p^i \times ||\theta||$
 * 이를 정리하면 다음과 같다</br>
-![SVM cost function with dots products](figs\fig12-14.png)
+![SVM cost function with dots products](figs/fig12-14.png)
 
 * 실제 동작</br>
-![How SVM select decision boundary](figs\fig12-15.png)
+![How SVM select decision boundary](figs/fig12-15.png)
 * Decision boundary와 수직인 벡터 $\theta$ 와 각 training data와의 내적을 구한다
 * 이 값이 최대가 되는 Decision boundary를 구한다
     - $x^{(1)}$ 의 경우 $p^{(1)}$ 의 크기가 매우 작다
@@ -193,7 +193,7 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
 ## Kernels - 1: Adapting SVM to non-linear classifiers
 * Kernal이 뭐고 어떻게 사용하는가
     - Training set이 있고, non-linear boundary를 찾고싶다</br>
-    ![Non-linear Training set](figs\fig12-16.png)
+    ![Non-linear Training set](figs/fig12-16.png)
     - Data를 fitting하기 위해 복잡한 polynormial features set을 만든다
         + $h_\theta(x)$ 에 대하여
             + parameter vector와의 연산 결과가 0 이하이면 1을 반환하고 아니면 0을 반환한다
@@ -226,7 +226,7 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
 * $\sigma^2$ 은 Gaussian kernel의 parameter이다
     - landmark 주변의 완만한 정도를 나타낸다
 * 아래의 그래프는 각각 $\sigma^2 = 1, \sigma^2 = 0.5, \sigma^2 = 3$ 을 나타낸 것이다
-![Gaussian Kernel with different sigmas](figs\fig12-17.png)
+![Gaussian Kernel with different sigmas](figs/fig12-17.png)
 * $\sigma^2$ 의 값이 작을 수록 더 급격하게 0이 된다
 * 예시
     - $\theta_0 + \theta_1 f_1 + \theta_2 f_2 + \theta_3 f_3 \geq 0$
@@ -235,16 +235,16 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
         + $\theta_2 = 0$
         + $\theta_3 = 0$
     - 분홍색 점에 대해서</br>
-    ![Gaussian Kernel with a data](figs\fig12-18.png)
+    ![Gaussian Kernel with a data](figs/fig12-18.png)
         + $f_1$ 은 1에 가까운 값일 것이고, $f_2, f_3$ 는 0에 가까운 값일 것이다
             + $\theta_0 + \theta_1 f_1 + \theta_2 f_2 + \theta_3 f_3$
             + $= -0.5 + 1 + 0 + 0 = 0.5$
                 - 0.5는 0보다 크기 때문에 해당 data는 1로 예측할 것이다
     - 하늘색 점에 대해서</br>
-    ![Gaussian Kernel with another data](figs\fig12-19.png)
+    ![Gaussian Kernel with another data](figs/fig12-19.png)
         + 이 경우에는 $-0.5 + 0 + 0 + 0 = -0.5 < 0$ 이므로 0으로 예측할 것이다
     - $l^1, l^2$ 와 가까운 점은 1로 예측하고 $l^3$ 과 가까운 점은 0으로 예측하도록 parameter가 설정되면 아래와 같은 non-linear decision boundary를 얻을 수 있을 것이다</br>
-    ![Gaussian Kernel with decision boundary](figs\fig12-20.png)
+    ![Gaussian Kernel with decision boundary](figs/fig12-20.png)
         + Boundary 내부 : y=1로 예측
         + Boundary 외부 : y=0으로 예측
 * SVM에서 어떻게 landmark를 이용해 non-linear boundary를 만들고 kernel 함수를 사용하는지에 대해 알아봤따
@@ -288,7 +288,7 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
 
 ### SVM training with kernels
 
-![SVM cost function with f](figs\fig12-21.png)
+![SVM cost function with f](figs/fig12-21.png)
     - x대신 f를 사용하여 minimize를 수행한다
     - 위의 식을 풀면 SVM의 parameter를 계산할 수 있다
 * 다른 알고리즘으로도 kernel을 해결할 수 있지만 SVM이 더 효율적이다
@@ -326,6 +326,8 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
         + 따라서 f 벡터가 없다
     - 주로 n이 크고 m이 작을 때 사용한다
 * Polynomial Kernel
+    - 거의 사용하지 않는다
+        + Gaussian Kernal에 비해 성능이 낮다
 * String Kernel
     - 입력이 test string일 대 사용한다
     - Text classification에서 사용한다
