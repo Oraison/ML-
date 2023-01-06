@@ -185,8 +185,8 @@
             + 요즘엔 거의 사용되지 않음
         + Naive Bayes
             + 추후 살펴볼 예정
-    - 다양한 training set의 크기와 다양한 알고리즘
-    ![Alt text](figs\fig11-1.png)
+    - 다양한 training set의 크기와 다양한 알고리즘</br>
+    ![Alt text](figs/fig11-1.png)
     - 위의 그래프를 통해 알 수 있는 것
         + 알고리즘의 정확성은 비슷하다
         + 많은 data는 도움이 된다
