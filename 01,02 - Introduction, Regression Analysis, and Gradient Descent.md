@@ -54,7 +54,7 @@ ML의 정의, 사용처
 * 가장 많은 유형의 ML
 
 ### 예시
-![Alt text](figs\fig1-1.png)
+![Alt text](figs/fig1-1.png)
 750 $feet^2$ size의 집이 있을 때 어느정도의 가격으로 측정되는가
 1. Data를 관통하는 직선을 기준으로하면 $150,000정도라고 할 수 있다.
 2. 주변의 Data를 기준으로 한다면 $200,000정도라고도 할 수 있다.
@@ -264,32 +264,29 @@ $
   에대한 정보가 있다
   * Matrix의 곱으로 표현하면
   
-  $
-  \displaystyle 
-  \begin{aligned}
-  \overrightarrow{y}\, =&\; X \times\overrightarrow{\theta} \\
-  \begin{bmatrix}
-  460 \\
-  232 \\
-  315 \\
-  172 \\
-  \end{bmatrix}
-  \; =& \; 
-  \begin{bmatrix}
-  2104 & 5 & 1 & 45 \\
-  1416 & 3 & 2 & 40 \\
-  1534 & 3 & 2 & 30 \\
-  852  & 2 & 1 & 36 \\
-  \end{bmatrix}
-  \times
-  \begin{bmatrix}
-  집의 크기 \\
-  방의 수 \\
-  층수 \\
-  연식 \\
-  \end{bmatrix}
-  \end{aligned}
-  $
+$\displaystyle \begin{aligned} \overrightarrow{y} =& X \times \overrightarrow{\theta}\\
+\begin{bmatrix}
+460 \\
+232 \\
+315 \\
+172 \\
+\end{bmatrix}
+=&
+begin{bmatrix}
+2104 & 5 & 1 & 45 \\
+1416 & 3 & 2 & 40 \\
+1534 & 3 & 2 & 30 \\
+852  & 2 & 1 & 36 \\
+\end{bmatrix}
+\times
+\begin{bmatrix}
+집의 크기 \\
+방의 수 \\
+층수 \\
+연식 \\
+\end{bmatrix}
+\end{aligned}
+$
 
   위와 같이 표현할 수 있다
 
