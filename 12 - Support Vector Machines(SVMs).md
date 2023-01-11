@@ -12,7 +12,7 @@
 ### An alternative view of logistic regression
 * Logistic regression을 변형하여 SVM을 생성할 것이다
     - 이전의 logistic regression은 아래와 같은 형태이다</br>
-    $\displaystyle h_\theta(x)=\frac{1}{1+e^{-\theta^Tx}}$
+    $\displaystyle h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}$
     - Sigmoid activation function은 아래와 같다</br>
     ![Alt text](figs/fig12-1.png)
     - z는 그림 아래와 같이 $(\theta^Tx)$ 로 정의했다
@@ -24,10 +24,10 @@
         + $h_\theta(x)$ 가 0에 근접하게 만들고 싶다
         + $h_\theta(x)$ 가 0에 근접할 때 $(\theta^Tx)$ 가 0보다 매우 작아야한다
 * Logistic regression
-    - Cost function은 아래와 같다</br>
+    - Cost function은 아래와 같다 </br>
     $\displaystyle -(y \log h_\theta(x) + (1-y) \log(1-h_\theta(x)))$
         + 모든 x에 대한 cost function은 각각의 training set의 x와 y를 통해 얻은 결과의 총합을 m으로 나눈 형태이다
-* 위의 cost function의 $h_\theta(x)$ 를 대입한다면 아래와 같다</br>
+* 위의 cost function의 $h_\theta(x)$ 를 대입한다면 아래와 같다 </br>
 $\displaystyle -(y \log \frac{1}{1+e^{-\theta^Tx}} + (1-y) \log(1-\frac{1}{1+e^{-\theta^Tx}}))$
 
 * y=1일 때의 z에대한 cost function의 그래프이다</br>
@@ -80,8 +80,8 @@ $\displaystyle -(y \log \frac{1}{1+e^{-\theta^Tx}} + (1-y) \log(1-\frac{1}{1+e^{
     - 상수 $\frac{1}{m}$ 이 있을 때의 최소값은 $\frac{1}{m}$ 이 없어도 최소값이다
 2. Logistic regression의 두 항을 변경한다
     - 위의 식은 두개의 항으로 되어있다
-        + Training data set term($\sum$ i = 1 to m) : A
-        + Regularization term($\sum$ i = 1 to n) : B
+        + Training data set term $(\sum_{i=1}^m)$ : A
+        + Regularization term $(\sum_{i=1}^n)$ : B
     - 위의 식은 $A + \lambda B$ 의 형태를 갖고있다
     - $\lambda$ 는 두 항 중 어떤 항에 더 가중치를 줄지를 결정하기 위한 상수이다
     - SVM에서는 $\lambda$ 대신 C를 사용할 것이다
@@ -161,16 +161,16 @@ $\displaystyle -(y \log \frac{1}{1+e^{-\theta^Tx}} + (1-y) \log(1-\frac{1}{1+e^{
 * 두개의 단순화를 통한 예시
     - $\theta_0 = 0$
     - n=2
-* 2개의 parameter만을 가지고 있기 때문에 cost function은 다음과 같다
-$\\\displaystyle \frac{1}{2}(\theta_1^2 + \theta_2^2)$
-* 이를 조금 변형시키면 다음과 같다
-$\\\displaystyle \frac{1}{2} \left(\sqrt{\theta_1^2 + \theta_2^2} \right)^2$
-* 위의 식에서 $\sqrt{\theta_1^2 + \theta_2^2} = ||\theta||$ 이므로 다음과 같이 나타낼 수 있다
-$\\\displaystyle \frac{1}{2}||\theta||^2$
+* 2개의 parameter만을 가지고 있기 때문에 cost function은 다음과 같다 </br>
+$\displaystyle \frac{1}{2}(\theta_1^2 + \theta_2^2)$
+* 이를 조금 변형시키면 다음과 같다 </br>
+$\displaystyle \frac{1}{2} \left(\sqrt{\theta_1^2 + \theta_2^2} \right)^2$
+* 위의 식에서 $\sqrt{\theta_1^2 + \theta_2^2} = ||\theta||$ 이므로 다음과 같이 나타낼 수 있다 </br>
+$\displaystyle \frac{1}{2}||\theta||^2$
 * SVM minimizing은 squared norm이다
 * $\theta^Tx$ 는 무엇을 의미하는가
-    - $\theta^Tx = \theta \cdot x$ 를 의미하므로 다음과 같이 쓸 수 있다
-    $\\\theta_1x_1^{(i)} + \theta_2x_2^{(i)} = p^i \times ||\theta||$
+    - $\theta^Tx = \theta \cdot x$ 를 의미하므로 다음과 같이 쓸 수 있다 </br>
+    $\theta_1x_1^{(i)} + \theta_2x_2^{(i)} = p^i \times ||\theta||$
 * 이를 정리하면 다음과 같다</br>
 ![SVM cost function with dots products](figs/fig12-14.png)
 
@@ -179,9 +179,9 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
 * Decision boundary와 수직인 벡터 $\theta$ 와 각 training data와의 내적을 구한다
 * 이 값이 최대가 되는 Decision boundary를 구한다
     - $x^{(1)}$ 의 경우 $p^{(1)}$ 의 크기가 매우 작다
-        + 이런 경우 $\theta$ 의 크기가 매우 커지게 된다($x^{(1)} \cdots ||\theta||\geq 1$ 이어야 되기 때문)
+        + 이런 경우 $\theta$ 의 크기가 매우 커지게 된다( $x^{(1)} \cdots ||\theta||\geq 1$ 이어야 되기 때문)
     - $x^{(2)}$ 의 경우 $p^{(2)}$ 의 크기가 매우 작다
-        + 이런 경우 $\theta$ 의 크기가 매우 커지게 된다($x^{(1)} \cdots ||\theta||< -1$ 이어야 되기 때문)
+        + 이런 경우 $\theta$ 의 크기가 매우 커지게 된다( $x^{(1)} \cdots ||\theta||< -1$ 이어야 되기 때문)
     - 때문에 SVM은 이 decision boundary를 선택하지 않는다
 
 ---
@@ -297,7 +297,7 @@ $\\\displaystyle \frac{1}{2}||\theta||^2$
     - C가 작으면
         + high bias, low variance : underfitting
 
-#### SVM parameters($\sigma$)
+#### SVM parameters $(\sigma)$
 * f를 계산하기위한 parameter
     - $\sigma^2$ 이 크면
         + f가 smooth해진다
