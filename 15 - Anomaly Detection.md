@@ -17,7 +17,7 @@
         + 이전의 엔진들과 크게 다르지 않다 </br>
         ![Graph- New engin test data is OK](figs/fig15-2.png)
     - 하지만 새로운 엔진이 다음과 같을 수도 있다
-        + 이 경우에는 Anomalouse data-point로 보인다
+        + 이 경우에는 Anomalouse data-point로 보인다 </br>
         ![Graph- New engin test data is anomalous](figs/fig15-3.png)
 * More formally
     - 기존에 normal data가 포함된 dataset이 있다
@@ -368,7 +368,7 @@
     - Features를 더 추가하지 않아도 된다
     - 계산 cost가 많이 필요하다
         + $[n \times n]$ matrix의 inverse계산이 필요하기 때문
-    - example의 수 m이 feature의 수 n 보다 더 만히 필요하다
+    - example의 수 m이 feature의 수 n 보다 더  필요하다
         + 그렇지 않을 경우에는 singular matrix를 갖게 된다
             + inverse 계산 불가
     - Non-invertable matrix라면 다음중 한가지 이유일 것이다
