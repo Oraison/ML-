@@ -204,7 +204,7 @@
         + Label은 y, feature vector는 z를 사용한다
     5. 새로운 training set이 있다면 마찬가지로 higher dimensionality vector를 lower dimensionality  vector로 mapping해서 알고리즘 학습에 사용한다
 * PCA는 백터를 lower dimensionality 백터로 변환한다
-    - x $\rarrow$ z
+    - x → z
     - Training set에 의해서만 PCA를 정의한다
     - Parameters의 set을 계산한다
         + Feature scaling values
